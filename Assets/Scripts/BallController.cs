@@ -6,6 +6,7 @@ public class BallController : MonoBehaviour
 {
     public Vector2 speed; 
     private Rigidbody2D rig; 
+    public Vector2 resetPosition; 
 
     void Start()
     {
@@ -18,4 +19,9 @@ public class BallController : MonoBehaviour
     {
         // transform.Translate(speed * Time.deltaTime); 
     }
+
+    public void ResetBall() 
+    { 
+        transform.position = new Vector3(resetPosition.x, resetPosition.y, 2); 
+    } 
 }
